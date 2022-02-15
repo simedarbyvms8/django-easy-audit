@@ -72,7 +72,7 @@ class RequestEventAdmin(EasyAuditModelAdmin):
     list_display = ['datetime', 'user_link', 'method', 'url', 'remote_ip']
     date_hierarchy = 'datetime'
     list_filter = REQUEST_EVENT_LIST_FILTER
-    search_fields = ['=remote_ip', 'username', 'url', 'query_string', ]
+    search_fields = ['=remote_ip', 'user__email', 'url', 'query_string', ]
     readonly_fields = ['url', 'method', 'query_string', 'user', 'remote_ip', 'datetime', ]
 
 
